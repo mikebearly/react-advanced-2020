@@ -1,12 +1,20 @@
-import React, { useState } from "react";
-import { data } from "../../../data";
+import React, { useState } from 'react';
+import { data } from '../../../data';
 
 const UseStateArray = () => {
   const [people, setPeople] = useState(data);
 
   const removeItem = (id) => {
-    let newPeople = people.filter((person) => person.id !== id);
-    setPeople(newPeople);
+    // Normail way
+
+    // let newPeople = people.filter((person) => person.id !== id);
+    // setPeople(newPeople);
+
+    // updated with inner method
+    setPeople((oldPeople) => {
+      let newPeople = oldPeople.filter((person) => person.id !== id);
+      return newPeople;
+    });
   };
 
   return (
