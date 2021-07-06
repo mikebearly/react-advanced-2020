@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useFetch } from './2-useFetch';
+import { useMike } from './2-useFetch';
 
 // ATTENTION!!!!!!!!!!
 // I SWITCHED TO PERMANENT DOMAIN
 const url = 'https://course-api.com/javascript-store-products';
 
 const Example = () => {
-  const { loading, data } = useFetch(url);
+  const { loading, data } = useMike(url);
   /*
   const [loading, setLoading] = useState(true)
   const [products, setProducts] = useState([])
